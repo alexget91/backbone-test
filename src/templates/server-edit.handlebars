@@ -1,0 +1,24 @@
+<article class="server-edit">
+  <form>
+    <div class="server-edit__field">
+      <label class="server-edit__label">Customer:</label>
+      <span>{{customer_id}}</span>
+    </div>
+    <div class="server-edit__field">
+      <label class="server-edit__label" for="server-name">Name:</label>
+      <input type="text" class="server-edit__input server-edit__text-input" id="server-name" name="server_name"
+             value="{{server_name}}">
+    </div>
+    <div class="server-edit__field">
+      <label class="server-edit__label" for="server-type">Type:</label>
+      <select class="server-edit__input server-edit__select" id="server-type" name="server_type">
+        {{#each serverTypes}}
+          <option{{#if isSelected}} selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="server-edit__button-place">
+      <input type="submit" class="button" value="Save">
+    </div>
+  </form>
+</article>

@@ -1,15 +1,10 @@
 $label-width: 80px;
 
 .server-edit {
-  display: flex;
-
-  &__form {
-    min-width: 300px;
-    margin: auto 0;
-    padding: 20px;
-    border: 1px solid $color-border-gray;
-    border-radius: 10px;
-  }
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid $color-border-gray;
+  border-radius: 10px;
 
   &__field {
     display: flex;

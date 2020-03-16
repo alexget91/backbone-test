@@ -9,5 +9,10 @@ $padding-vertical: 20px;
     max-height: calc(100vh - 2 * #{$padding-vertical});
     overflow: auto;
     padding: 0 20px;
+
+    &--edit {
+      display: flex;
+      align-items: center;
+    }
   }
 }

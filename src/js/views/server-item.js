@@ -1,5 +1,6 @@
 import Backbone from "backbone";
 import templates from "../../../assets/templates";
+import ServerEdit from "./server-edit";
 
 const ServerItem = Backbone.View.extend({
   template: templates[`server-item`],
@@ -19,7 +20,7 @@ const ServerItem = Backbone.View.extend({
   },
 
   handleClick() {
-    console.log(this.model.toJSON());
+    new ServerEdit({model: this.model}).render();
   }
 });
 

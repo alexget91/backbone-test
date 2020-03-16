@@ -30,7 +30,6 @@ gulp.task('scripts', () => gulp.src('src/js/index.js')
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(rollup({
-    // external: [ 'fs' ],
     plugins: [
       resolve({browser: true}),
       commonjs(),
@@ -60,7 +59,6 @@ gulp.task('templates', () => gulp.src('src/templates/*.handlebars')
   .pipe(wrap('Handlebars.template(<%= contents %>)'))
   .pipe(declare({
     root: 'exports',
-    // namespace: 'App.templates',
     noRedeclare: true,
   }))
   .pipe(concat('templates.js'))
