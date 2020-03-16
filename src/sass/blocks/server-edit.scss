@@ -1,0 +1,41 @@
+$label-width: 80px;
+
+.server-edit {
+  display: flex;
+
+  &__form {
+    min-width: 300px;
+    margin: auto 0;
+    padding: 20px;
+    border: 1px solid $color-border-gray;
+    border-radius: 10px;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  &__label {
+    width: $label-width;
+  }
+
+  &__input {
+    padding: 3px 5px;
+    border: 1px solid $color-border-gray;
+    border-radius: 3px;
+  }
+
+  &__text-input {
+    flex-grow: 1;
+  }
+
+  &__select {
+    padding-left: 2px;
+  }
+
+  &__button-place {
+    padding: 10px 0 0 $label-width;
+  }
+}

@@ -1,0 +1,22 @@
+.server-item {
+  padding: 10px 0;
+  border-bottom: 1px solid $color-border-gray;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: 1px solid $color-border-gray;
+  }
+
+  &:hover {
+    background: $color-hover-gray;
+  }
+
+  &:active,
+  &.active {
+    background: $color-border-gray;
+  }
+
+  &__list {
+    margin: 0;
+  }
+}

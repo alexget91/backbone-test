@@ -1,0 +1,13 @@
+$padding-vertical: 20px;
+
+.servers {
+  display: flex;
+  padding: $padding-vertical 0;
+
+  &__section {
+    width: 50%;
+    max-height: calc(100vh - 2 * #{$padding-vertical});
+    overflow: auto;
+    padding: 0 20px;
+  }
+}
