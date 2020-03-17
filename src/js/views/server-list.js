@@ -3,17 +3,18 @@ import _ from "underscore";
 import ServerItem from "./server-item";
 
 const ServerList = Backbone.View.extend({
-  el: '#server-list',
+  el: `#server-list`,
 
   initialize() {
+    this.collection.fetch();
     this.render();
   },
 
   render() {
     const fragment = document.createDocumentFragment();
 
-    _.each(this.model.models, (serverModel) => {
-      fragment.appendChild(new ServerItem({model: serverModel}).el);
+    _.each(this.collection.models, (serverModel) => {
+      fragment.appendChild(new ServerItem({model: serverModel, list: this}).el);
     });
 
     this.$el.html(fragment);

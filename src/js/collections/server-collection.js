@@ -1,4 +1,5 @@
 import Backbone from "backbone";
+import _ from "underscore";
 import ServerModel from "../models/server-model";
 import LocalStorage from "backbone.localstorage";
 
@@ -11,7 +12,9 @@ const ServerCollection = Backbone.Collection.extend({
       success(collection) {
         if (!collection.length) {
           collection.set(data);
-          Backbone.sync(`create`, collection);
+          _.each(collection.models, (serverModel) => {
+            serverModel.save();
+          });
         }
       },
       error() {
