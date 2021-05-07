@@ -38,6 +38,6 @@
     "backbone.localstorage": "2.0.2",
     "handlebars": "4.7.3",
     "jquery": "3.4.1",
-    "underscore": "1.9.2"
+    "underscore": "1.12.1"
   }
 }
